@@ -980,4 +980,26 @@ footer #socialmedia ul li img {
     font-size:18px;
     font-weight: 500;
 }
+
+#ugateway_address {
+    position:relative;
+    top:-190px;
+    left:280px;
+    font-family: "Helvetica", "Arial", "sans-serif","Sans-serif";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    text-align: center;
+    color: #0086da;
+    word-spacing: 1px;
+    width:400px;
+}
+
+#address {
+    position:relative;
+    top:50px;
+    left:-60px;;
+    width:500px;
+    height:300px;
+
 /*# sourceMappingURL=style.css.map */
