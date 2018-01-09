@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>DailyDuan</title>
+</head>
+<body id="spybody">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top" id="topnavbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img class="navbar-brand rounded-circle mr-auto" src="images/me.png" style="width:65px; height:75px" alt="myself">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-intro" aria-controls="nav-intro" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="nav-intro">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link active" href="#introduce">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="#food">Food Collection</a>
+                        <a class="nav-item nav-link" href="#travel">Travelling Collection</a>
+                        <a class="nav-item nav-link" href="#tech">Tech Diary</a>
+                        <a class="nav-item nav-link" href="#volunteer">Volun Collection</a>
+                        <div class="dropdown">
+                                <a class="nav-item nav-link dropdown-toggle" href="#" 
+                                id="navbarDropdown" role="button" data-toggle="dropdown" 
+                                aria-haspopup="true" aria-expanded="false"
+                                >Profile</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="https://www.linkedin.com/in/wenjing-duan-b75653148" target="_block">
+                                        <img src="./images/linkedin-icon.jpg" alt="linkedin" style="width:35px;height:35px;">
+                                        <span  style="text-decoration: underline; color:rgba(0, 0, 255, 0.575); margin-left:14px;">LinkedIn</span>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="https://github.com/ddwwjj/" target="_block">
+                                        <img src="./images/github-icon.jpg" alt="Github" style="width:35px;height:35px;">
+                                        <span style="text-decoration: underline; color:rgba(0, 0, 255, 0.575); margin-left:14px;">Github</span>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">
+                                            <img src="./images/email-icon.jpg" alt="Email" style="width:35px;height:35px;">
+                                        <span style="text-decoration: underline; color:rgba(0, 0, 255, 0.575); margin-left:12px;">duanw@usc.edu</span>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">
+                                            <img src="./images/phone-icon.jpg" alt="Phone" style="width:35px;height:35px;">
+                                        <span style="text-decoration: underline; color:rgba(0, 0, 255, 0.575); margin-left: 12px;">213-245-0722</span>
+                                    </a>
+                                </div>
+                        </div><!--dropdown--> 
+                    </div><!-- navbar-nav -->
+                </div><!-- navbar collaps -->
+            </div><!--container-->
+        </nav><!--nav introduction -->
+
+        <nav class="navbar navbar-light bg-white mb-4">
+            <div class="container">
+                <form class="form-inline">
+                    <div class="row">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </div>
+                </form>
+            </div><!-- containe search--> 
+        </nav><!-- nav search -->
+    </header>
+
+    <div class="main">
+        <div class="content container" id="introduce">
+            <div class = "mb-4"style="overflow-x: hidden;height: 50vh; background: url(images/universal-studio.jpg) no-repeat center center; background-size: cover;">
+                <h2 id="greeting"> Greeting </h2>
+                <div class="row">
+                    <p class="col-md-5 offset-md-1"><span class="font-weight-bold " style="font-size:1.5rem; font-style: italic;">Hello</span> my future boss or potential bosses or nice people who agree to refer me. My name is Wenjing Duan, and I am currently a Master student in Computer Science at Viterbi School of Engineering at University of Southern California. Don't get me wrong, this is not my portfolio, this is a self-driven web application whose contents are all around my daily life.  This web app is built from scratch using Express as front-end, Node.js and Mongodb as back-end framework. I will describe more details about the technique details in Tech Diary.</p>
+                    <p class="col-md-5"><span class="font-weight-bold " style="font-size:1.5rem; font-style: italic;">Well,</span> you may wondering, why do you build this site? Especially in today's world, the least things we lack are public platforms where people could show their lives and thinkings to friends or even the world. Do you do this to learn new frameworks and technologies? Do you do this to make your experiences more competitive? Do you do this to promote yourself? The answer is: yes, why not. But besides, I want to create my personal "comfort zone". Inspired by lots of Youtubers, I started to think why not designing my own digital diary so that I could do, post and save all great things I like in my life and make my day. I can I excel at learning new technologies and applying them in right place. So no matter what  I want to display, I can manage that.</p>
+                </div>
+            </div><!-- introduction -->
+        </div><!--container-->
+
+        <div class="content container" id="collections">
+            <div class="jumbotron text-white" id="food">       
+                <h1 class="display-4 jumb-title mt-0 pt-0">Food Collection
+                    <div id="foodintro">
+                        I like collection, I like food. I list them because they are relative to my stories.<br>Hover over those pictures to see what happened.
+                    </div>
+                </h1>                
+                <hr class="my-3" style="height:10px;">
+                <div id="foodCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center">                                                   
+                                <div class="col-3 mr-5" id="mcd">
+                                    <div class="quote">
+                                        <span class="intro">Mcdonald's</span>
+                                        <span class="more">During my intern at ICT as a research assistant, I also had a part-time job at Mcdonald's. Super relax and happy! Ice-cream master! </span>
+                                    </div>
+                                </div> <!-- col -->
+                                                                   
+                                <div class="col-3" id="kfc">
+                                    <div class="quote" >
+                                        <span class="intro">KFC</span>
+                                        <span class="more">The first time that I had KFC was on my 10th birthday. After the meal, we were excorted home by police becasue we accidentally called an illegal taxi. So thrilling!</span>
+                                    </div>
+                                </div> <!-- col -->
+                                
+                                <div class="col-3 ml-5"  id="pizza" >
+                                    <div class="quote">
+                                        <span class="intro">Pizza</span>
+                                        <span class="more">Pizza was my first meal at USA after starving for three days cause I was to scared to eat outside and I didn't have things to cook. </span>
+                                    </div>
+                                </div> <!-- col -->                             
+                            </div><!-- row -->   
+                        </div> <!-- carousel-item -->
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">                                                   
+                                <div class="col-3 mr-5" id="mcd">
+                                    <div class="quote">
+                                        <span class="intro">Mcdonald's</span>
+                                        <span class="more">During my intern at ICT as a research assistant, I also had a part-time job at Mcdonald's. Super relax and happy! Ice-cream master! </span>
+                                    </div>
+                                </div> <!-- col -->
+                                                                           
+                                <div class="col-3" id="kfc">
+                                    <div class="quote" >
+                                        <span class="intro">KFC</span>
+                                        <span class="more">The first time that I had KFC was on my 10th birthday. After the meal, we were excorted home by police becasue we accidentally called an illegal taxi. So thrilling!</span>
+                                    </div>
+                                </div> <!-- col -->
+                                        
+                                <div class="col-3 ml-5"  id="pizza" >
+                                    <div class="quote">
+                                        <span class="intro">Pizza</span>
+                                        <span class="more">Pizza was my first meal at USA after starving for three days cause I was to scared to eat outside and I didn't have things to cook. </span>
+                                    </div>
+                                </div> <!-- col -->                             
+                            </div><!-- row --> 
+                        </div> <!-- carousel-item -->
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">                                                   
+                                <div class="col-3 mr-5" id="mcd">
+                                    <div class="quote">
+                                        <span class="intro">Mcdonald's</span>
+                                        <span class="more">During my intern at ICT as a research assistant, I also had a part-time job at Mcdonald's. Super relax and happy! Ice-cream master! </span>
+                                    </div>
+                                </div> <!-- col -->
+                                                                           
+                                <div class="col-3" id="kfc">
+                                    <div class="quote" >
+                                        <span class="intro">KFC</span>
+                                        <span class="more">The first time that I had KFC was on my 10th birthday. After the meal, we were excorted home by police becasue we accidentally called an illegal taxi. So thrilling!</span>
+                                    </div>
+                                </div> <!-- col -->
+                                        
+                                <div class="col-3 ml-5"  id="pizza" >
+                                    <div class="quote">
+                                        <span class="intro">Pizza</span>
+                                        <span class="more">Pizza was my first meal at USA after starving for three days cause I was to scared to eat outside and I didn't have things to cook. </span>
+                                    </div>
+                                </div> <!-- col -->                             
+                            </div><!-- row --> 
+                        </div> <!-- carousel-item -->
+                    </div> <!--  carousel-inner -->
+                    <a class="carousel-control-prev" href="#foodCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#foodCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div> <!--  carousel slide -->
+            </div> <!--jumbotron -->
+
+            <div class="jumbotron text-white" id="travel">       
+                <h1 class="display-4 jumb-title">Travelling Collection
+                    <div id="travelintro">
+                        I like collection, I like travelling. Those are my favorite experiences.<br>Hover over those pictures to see what happened.
+                    </div>
+                </h1>
+                <hr class="my-3" style="height:10px;">
+                <div id="travelCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center">                                                   
+                                <div class="col-3 mr-5" id="universe">
+                                    <div class="quote" >
+                                        <span class="intro">Universal Studio</span>
+                                        <span class="more">It was my first time to spend New Year's eve without my family.</span>
+                                        <span class="more">This magic place inspired me a lot, it encourages me to go for my Dreams!</span>
+                                    </div>
+                                </div> <!-- col -->
+                                                                        
+                                <div class="col-3" id="universe">
+                                    <div class="quote" >
+                                        <span class="intro">Universal Studio</span>
+                                        <span class="more">It was my first time to spend New Year's eve without my family.</span>
+                                        <span class="more">This magic place inspired me a lot, it encourages me to go for my Dreams!</span>
+                                    </div>
+                                </div> <!-- col -->
+                                    
+                                <div class="col-3 ml-5"  id="universe" >
+                                    <div class="quote" >
+                                        <span class="intro">Universal Studio</span>
+                                        <span class="more">It was my first time to spend New Year's eve without my family.</span>
+                                        <span class="more">This magic place inspired me a lot, it encourages me to go for my Dreams!</span>
+                                    </div>
+                                </div> <!-- col -->                             
+                            </div><!-- row -->  
+                        </div> <!-- carousel-item -->
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">                                                   
+                                <div class="col-3 mr-5" id="universe">
+                                    <div class="quote" >
+                                        <span class="intro">Universal Studio</span>
+                                        <span class="more">It was my first time to spend New Year's eve without my family.</span>
+                                        <span class="more">This magic place inspired me a lot, it encourages me to go for my Dreams!</span>
+                                    </div>
+                                </div> <!-- col -->
+                                                                                
+                                <div class="col-3" id="universe">
+                                    <div class="quote" >
+                                        <span class="intro">Universal Studio</span>
+                                        <span class="more">It was my first time to spend New Year's eve without my family.</span>
+                                        <span class="more">This magic place inspired me a lot, it encourages me to go for my Dreams!</span>
+                                    </div>
+                                </div> <!-- col -->
+                                            
+                                <div class="col-3 ml-5"  id="universe" >
+                                    <div class="quote" >
+                                        <span class="intro">Universal Studio</span>
+                                        <span class="more">It was my first time to spend New Year's eve without my family.</span>
+                                        <span class="more">This magic place inspired me a lot, it encourages me to go for my Dreams!</span>
+                                    </div>
+                                </div> <!-- col -->                             
+                            </div><!-- row -->  
+                        </div> <!-- carousel-item -->
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">                                                   
+                                <div class="col-3 mr-5" id="universe">
+                                    <div class="quote" >
+                                        <span class="intro">Universal Studio</span>
+                                        <span class="more">It was my first time to spend New Year's eve without my family.</span>
+                                        <span class="more">This magic place inspired me a lot, it encourages me to go for my Dreams!</span>
+                                    </div>
+                                </div> <!-- col -->
+                                                                                
+                                <div class="col-3" id="universe">
+                                    <div class="quote" >
+                                        <span class="intro">Universal Studio</span>
+                                        <span class="more">It was my first time to spend New Year's eve without my family.</span>
+                                        <span class="more">This magic place inspired me a lot, it encourages me to go for my Dreams!</span>
+                                    </div>
+                                </div> <!-- col -->
+                                            
+                                <div class="col-3 ml-5"  id="universe" >
+                                    <div class="quote" >
+                                        <span class="intro">Universal Studio</span>
+                                        <span class="more">It was my first time to spend New Year's eve without my family.</span>
+                                        <span class="more">This magic place inspired me a lot, it encourages me to go for my Dreams!</span>
+                                    </div>
+                                </div> <!-- col -->                             
+                            </div><!-- row -->  
+                        </div> <!-- carousel-item -->
+                    </div> <!--  carousel-inner -->
+                    <a class="carousel-control-prev" href="#travelCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#travelCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div> <!--  carousel slide -->
+            </div> <!--jumbotron -->
+
+            <div class="jumbotron text-white" id="tech">       
+                <h1 class="display-4 jumb-title">Tech Diary
+                    <div id="techintro">
+                        Those tech diaries are Web Technology related. And they are also like my notebooks.<br>Hover over those pictures to see what happened.
+                    </div>
+                </h1>
+                <hr class="my-3" style="height:10px;">
+                <div id="techCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center">                                                   
+                                <article class="col-3 mr-5">
+                                    <img class= "icon" src="images/bootstrap.jpg" alt="bootstrap" style="width:40%; height:40%;">
+                                    <h3 class="mt-0 text-dark">BootStrap</h3>
+                                    <p class="font-italic text-dark">front-end framework</p>
+                                </article> <!-- article -->                                                
+                                                                
+                                <article class="col-3">
+                                    <img class= "icon" src="images/bootstrap.jpg" alt="bootstrap" style="width:40%; height:40%;">
+                                    <h3 class="mt-0 text-dark">BootStrap</h3>
+                                    <p class="font-italic text-dark">front-end framework</p>
+                                </article> <!--article --> 
+                                                            
+                                <article class="col-3 ml-5">
+                                    <img class= "icon" src="images/bootstrap.jpg" alt="bootstrap" style="width:40%; height:40%;">
+                                    <h3 class="mt-0 text-dark">BootStrap</h3>
+                                    <p class="font-italic text-dark">front-end framework</p>
+                                </article> <!-- article -->                                
+                            </div><!-- row -->  
+                        </div> <!-- carousel-item -->
+
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">                                                   
+                                <article class="col-3 mr-5">
+                                    <img class= "icon" src="images/bootstrap.jpg" alt="bootstrap" style="width:40%; height:40%;">
+                                    <h3 class="mt-0 text-dark">BootStrap</h3>
+                                    <p class="font-italic text-dark">front-end framework</p>
+                                </article> <!-- article -->                                                
+                                                                
+                                <article class="col-3">
+                                    <img class= "icon" src="images/bootstrap.jpg" alt="bootstrap" style="width:40%; height:40%;">
+                                    <h3 class="mt-0 text-dark">BootStrap</h3>
+                                    <p class="font-italic text-dark">front-end framework</p>
+                                </article> <!--article --> 
+                                                            
+                                <article class="col-3 ml-5">
+                                    <img class= "icon" src="images/bootstrap.jpg" alt="bootstrap" style="width:40%; height:40%;">
+                                    <h3 class="mt-0 text-dark">BootStrap</h3>
+                                    <p class="font-italic text-dark">front-end framework</p>
+                                </article> <!-- article -->                 
+                            </div><!-- row -->  
+                        </div> <!-- carousel-item -->
+                    </div> <!--  carousel-inner -->
+                    <a class="carousel-control-prev" href="#techCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true" style="color:beige"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#techCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true" style="color:beige"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div> <!--  carousel slide -->
+            </div> <!--jumbotron -->
+
+            <div class="jumbotron text-white mb-0" id="volunteer">       
+                <h1 class="display-4 jumb-title">Volunteer Collectiony
+                    <div id="voluintro">
+                        I love helping people, I love trying different things.<br>Hover over those pictures to see what happened.
+                    </div>
+                </h1>
+                <hr class="my-3" style="height:10px;">
+                <div id="voluCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center">                                                   
+                                <div class="col-3 mr-5" id="vit-ori">
+                                    <div class="quote" >
+                                        <span class="intro">Viterbi-Orientation</span>
+                                        <span class="more">Making new friends. Faculties of USC are awesome. Escorting new students to VKC was a big challenge for me because I have no sense of direction.</span>
+                                        <span class="more">It was also a make up for college regret.</span>
+                                    </div>
+                                </div> <!-- col -->
+                                                                                        
+                                <div class="col-3" id="vit-ori">
+                                    <div class="quote" >
+                                        <span class="intro">Viterbi-Orientation</span>
+                                        <span class="more">Making new friends. Faculties of USC are awesome. Escorting new students to VKC was a big challenge for me because I have no sense of direction.</span>
+                                        <span class="more">It was also a make up for college regret.</span>
+                                    </div>
+                                </div> <!-- col -->
+                                                    
+                                <div class="col-3 ml-5"  id="vit-ori" >
+                                    <div class="quote" >
+                                        <span class="intro">Viterbi-Orientation</span>
+                                        <span class="more">Making new friends. Faculties of USC are awesome. Escorting new students to VKC was a big challenge for me because I have no sense of direction.</span>
+                                        <span class="more">It was also a make up for college regret.</span>
+                                    </div>
+                                </div> <!-- col -->                             
+                            </div><!-- row -->  
+                        </div> <!-- carousel-item -->
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">                                                   
+                                <div class="col-3 mr-5" id="vit-ori">
+                                    <div class="quote" >
+                                        <span class="intro">Viterbi-Orientation</span>
+                                        <span class="more">Making new friends. Faculties of USC are awesome. Escorting new students to VKC was a big challenge for me because I have no sense of direction.</span>
+                                        <span class="more">It was also a make up for college regret.</span>
+                                    </div>
+                                </div> <!-- col -->
+                                                                                        
+                                <div class="col-3" id="vit-ori">
+                                    <div class="quote" >
+                                        <span class="intro">Viterbi-Orientation</span>
+                                        <span class="more">Making new friends. Faculties of USC are awesome. Escorting new students to VKC was a big challenge for me because I have no sense of direction.</span>
+                                        <span class="more">It was also a make up for college regret.</span>
+                                    </div>
+                                </div> <!-- col -->
+                                                    
+                                <div class="col-3 ml-5"  id="vit-ori" >
+                                    <div class="quote" >
+                                        <span class="intro">Viterbi-Orientation</span>
+                                        <span class="more">Making new friends. Faculties of USC are awesome. Escorting new students to VKC was a big challenge for me because I have no sense of direction.</span>
+                                        <span class="more">It was also a make up for college regret.</span>
+                                    </div>
+                                </div> <!-- col -->                             
+                            </div><!-- row -->  
+                        </div> <!-- carousel-item -->
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">                                                   
+                                <div class="col-3 mr-5" id="vit-ori">
+                                    <div class="quote" >
+                                        <span class="intro">Viterbi-Orientation</span>
+                                        <span class="more">Making new friends. Faculties of USC are awesome. Escorting new students to VKC was a big challenge for me because I have no sense of direction.</span>
+                                        <span class="more">It was also a make up for college regret.</span>
+                                    </div>
+                                </div> <!-- col -->
+                                                                                        
+                                <div class="col-3" id="vit-ori">
+                                    <div class="quote" >
+                                        <span class="intro">Viterbi-Orientation</span>
+                                        <span class="more">Making new friends. Faculties of USC are awesome. Escorting new students to VKC was a big challenge for me because I have no sense of direction.</span>
+                                        <span class="more">It was also a make up for college regret.</span>
+                                    </div>
+                                </div> <!-- col -->
+                                                    
+                                <div class="col-3 ml-5"  id="vit-ori" >
+                                    <div class="quote" >
+                                        <span class="intro">Viterbi-Orientation</span>
+                                        <span class="more">Making new friends. Faculties of USC are awesome. Escorting new students to VKC was a big challenge for me because I have no sense of direction.</span>
+                                        <span class="more">It was also a make up for college regret.</span>
+                                    </div>
+                                </div> <!-- col -->                             
+                            </div><!-- row -->  
+                        </div> <!-- carousel-item -->
+                    </div> <!--  carousel-inner -->
+                    <a class="carousel-control-prev" href="#voluCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true" style="color:beige"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#voluCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true" style="color:beige"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div> <!--  carousel slide -->
+            </div> <!--jumbotron -->
+        </div><!-- container -->
+    </div><!--main-->
+    <footer>
+        <div class="content container-fluid">
+            <p>Date: 2018/1/4</p>
+        </div><!-- content container -->
+    </footer>
+          
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="js/myscript.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <!--<script src="/socket.io/socket.io.js"></script>-->
+
+    <script>
+        
+    </script>
+</body>
+</html>
