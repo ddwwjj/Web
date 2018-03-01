@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content = "Creating a web page for JSON parse.">
+    <title>hw4</title>
+    <style>
+        h1 {
+            font-family:'Times New Roman';
+            font-weight: 700;
+            font-size:30px;
+            margin-top: 200px;
+            text-align: center;
+        }
+        
+        form {
+            margin:0 auto;
+            width: 200px;
+        }
+        #textform {
+            width:200px;
+        }
+        #submit {
+            display:block;
+            margin:0 auto;
+            width:100px;
+        }
+        
+        th, td {
+            border-top:1px solid black;
+            border-left:1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Enter URL for Trucking List JSON File</h1>
+    <form>  
+        <input id = "textform" type="text" name="JsonFile">
+        <br><br>
+        <input id = "submit" type="button" name = "summitButton" value ="Submit Query" onclick="loadJSON()">
+    </form>
+    <!--
+    <p id="warning" style="color:red; fond-size: 20px; font-weight:500;"></p>-->
+    <script type="text/javascript">
+        var jsonDoc;  
+        var url;
+        function loadJSON() {
+            //check if url is empty
+            
+            url = document.getElementById('textform').value;
+            url = url.trim();
+            var re =new RegExp(".json$");
+           
+            if(url === "" || !re.test(url)) {
+                window.alert("Please enter a json file!!!");
+                //newElement.innerHTML="Lacking jsonfile name, please fill that in first!!!";
+                return;
+            }
+            else {
+                var xmlhttp=new XMLHttpRequest();
+                
+                xmlhttp.open("GET",url,false); //open, send, responseText are
+                
+                try{
+                    xmlhttp.send(); //properties of XMLHTTPRequest
+                    if(xmlhttp.readyState === 4) {
+                        if(xmlhttp.status===404) {
+                            window.alert("file not found, please try another one!"); 
+                        }
+                        else {
+                               //get json file and parse it.
+                                    jsonDoc=xmlhttp.responseText;
+                                    console.log(jsonDoc);
+                                    var doc  = JSON.parse(jsonDoc);
+                                    //var doc = eval('(' + jsonDoc + ')');
+
+                                    var table = doc.Mainline.Table;
+
+                                    createTable(table);   
+                        }
+                    }
+                } catch(err) {
+                        window.alert("file not found, please try another one!");
+                }
+             
+            }
+                          
+        }
+            
+        
+        // ....... processing the document goes here
+        
+        function createTable(table) {
+            var header = table.Header;
+            var data = header.Data;
+            var row = table.Row;
+            if(row === undefined) {
+                window.alert("No trucking companies");
+                return;
+            }
+            
+            myWindow=window.open('','tabledisplay',"height=1080,width=1080");
+            myWindow.document.write('<!doctype html><html><head><title>jsontable</title>');
+            //creating table
+            var style = "";
+            style +='<style>';
+            style +='body{font-family:"Times New Roman"; width:1247px;}'
+            style +='table {width:100%; border-right: 1px solid black;border-top: 1px solid #CFCFCF;border-bottom:1px solid black;border-left: 1px solid #CFCFCF;font-weight: 700;font-size:20px;}';
+            
+            style += 'th, td{border-left:1px solid black;border-top:1px solid black;border-right:1px solid #CFCFCF;border-bottom: 1px solid #CFCFCF;}';
+            
+            style +='td {font-weight:400;}';
+            
+            style +='</style>';
+            
+            
+            myWindow.document.write(style);
+            myWindow.document.write('<head><body>')
+            
+            var th = "";
+            myWindow.document.write("<table style='width:100%; border-right:1px solid black; border-bottom: 1px solid black;'>");
+            myWindow.document.write("<tr>");
+            //writing table header
+            for(var i=0; i<data.length; i++) {
+                th += '<th>' + data[i] +'</th>';
+               
+            }//for each array element
+            myWindow.document.write(th);
+            myWindow.document.write("</tr>");
+            
+            //writing table rows
+            
+            for(var i=0; i<row.length; i++) {
+                //one tr
+                var tr = "<tr>";
+               
+                for(key in row[i]) {
+                    var td="<td>";
+                    if(row[i].hasOwnProperty(key)) {
+                        if(key == "Hubs") {
+                            var hubs = row[i][key];
+                            var hub = hubs.Hub;
+                            if(hub.length > 0) {
+                                var ul = "<ul>";
+                                for(var k=0; k<hub.length; k++) {
+                                    if(k == 0) {
+                                        ul+='<li><b>' + hub[k] +'</b></li>'
+                                    }
+                                    else{
+                                         ul+='<li>' + hub[k] +'</li>';
+                                    }
+                                   
+                                }
+                                ul +='</ul>';
+                                td+=ul;
+                            }
+                        }
+                        else if(key =="HomePage" && row[i][key]!=""){
+                            td+='<a target="_self" href = "' + row[i][key] +'">' + row[i][key] +'</a>';
+                            
+                        }
+                        else if(key == "Logo" && row[i][key]!="") {
+                            td+='<img style="width:300px; height:auto;"src="' + row[i][key] + '">';
+                        }
+                        else {
+                            td += row[i][key];
+                        }                       
+                    }
+                    td+="</td>";
+                    tr+=td;
+                    
+                }//for each object
+          
+                tr += "</tr>";
+                myWindow.document.write(tr);
+            }//for each array element
+            //end of the table
+            myWindow.document.write("</table>");
+            myWindow.document.write('</body><html>');
+            myWindow.location.reload();
+            //myWindow.focus()
+        }
+    </script> 
+</body>
+
+</html>
