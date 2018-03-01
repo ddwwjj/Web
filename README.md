@@ -1,3 +1,4 @@
+
 # Web Development Projects
 
 ## Hi everyone, welcome to my web development channel. 
@@ -17,3 +18,8 @@ I am a master student of CS at USC, I love web development, front-end, back-end 
   - Given for screen shots of a web page, I shoud reproduce the page as closely as possible. This is very helpful as it is often necessary to modify existing documents
   - Technique: HTML, CSS
   - Date: 1.2018
+
+- Trucking company searching: [CS-server link](http://www-scf.usc.edu/~duanw/hw4/hw4.html)
+  - Took the URL of a JSON document containing Trucking companies information, parses the JSON file, and extracts the list of trucking companies, displaying them in a table. I should handle bace cases when the URL is empty, no file exists, no trucking company information exists
+  - Technuque: Javascript, JSON
+  - Date: 2.2018
