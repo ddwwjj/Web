@@ -19,7 +19,9 @@ I am a master student of CS at USC, I love web development, front-end, back-end 
   - Technique: HTML, CSS
   - Date: 1.2018
 
-- Trucking company searching: [CS-server link](http://www-scf.usc.edu/~duanw/hw4/hw4.html)
+- Trucking company searching: 
+[Youtube link](https://youtu.be/jaWaNbSX-z8)
+[Weibo link](https://weibo.com/tv/v/G5OBoxBbq?fid=1034:198c3eaddea41fdc99020d01af41c2c8)
   - Took the URL of a JSON document containing Trucking companies information, parses the JSON file, and extracts the list of trucking companies, displaying them in a table. I should handle bace cases when the URL is empty, no file exists, no trucking company information exists
   - Technuque: Javascript, JSON
   - Date: 2.2018
